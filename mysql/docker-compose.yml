@@ -1,0 +1,13 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 13306:3306
+    environment:
+      #MYSQL_DATABASE: mockdata
+      #MYSQL_USER: mockdata
+      #MYSQL_PASSWORD: mockdata
+      MYSQL_ROOT_PASSWORD: root
+    volumes: 
+      - ./data:/var/lib/mysql
